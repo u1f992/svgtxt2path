@@ -1,0 +1,30 @@
+{
+  "name": "@u1f992/svgtxt2path",
+  "version": "0.1.0",
+  "main": "index.js",
+  "bin": {
+    "svgtxt2path": "dist/cli.js"
+  },
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\"",
+    "build:version": "node -e \"const fs=require('node:fs');fs.writeFileSync('src/version.ts','export const VERSION=\\''+JSON.parse(fs.readFileSync('package.json',{encoding:'utf-8'})).version+'\\'',{encoding:'utf-8'})\"",
+    "build": "npm run build:version && npm run format && tsc",
+    "test": "npm run build && node --test"
+  },
+  "keywords": [],
+  "author": "Koutaro Mukai",
+  "license": "GPL-3.0",
+  "description": "",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.9.7",
+    "commander": "^13.1.0",
+    "xpath": "^0.0.34"
+  }
+}
