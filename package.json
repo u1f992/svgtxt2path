@@ -1,6 +1,6 @@
 {
   "name": "@u1f992/svgtxt2path",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "bin": {
     "svgtxt2path": "dist/cli.js"
